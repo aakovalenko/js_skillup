@@ -1,10 +1,10 @@
-/* Task1 */
+/* === Task1 === */
 let admin, name;
 name = "Джон";
 admin = name;
 console.log(admin);
 
-/* Task2 */
+/* === Task2 === */
 /* 2.1 */
 let userNumber = prompt("Ведите число меньше 10", 0);
 console.log(userNumber);
@@ -54,4 +54,13 @@ switch (number) {
         default : 
         alert('Вы ввели другое число');
         break;
+}
+
+/* === Task3 === */
+/* 3.1 */
+let startNum = 2;
+for(startNum; startNum  <= 100; startNum++) {
+    if (startNum % 2 == 0) {
+        console.log(startNum);
+    }
 }
