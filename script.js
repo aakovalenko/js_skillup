@@ -70,3 +70,16 @@ let userNumberPrompt;
 do {
     userNumberPrompt = prompt("Введите число больше 100",0);
 } while (userNumberPrompt <= 100 && userNumberPrompt);
+
+/* 3.3 */
+
+let n = 20;
+
+nextIterration: 
+for (let z = 2; z <= n; z++) {
+    for (let b = 2; b < z; b++) {
+        if (z % b == 0) continue nextIterration;
+    }
+    console.log(z);
+}
+
