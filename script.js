@@ -64,3 +64,9 @@ for(startNum; startNum  <= 100; startNum++) {
         console.log(startNum);
     }
 }
+/* 3.2 */
+
+let userNumberPrompt; 
+do {
+    userNumberPrompt = prompt("Введите число больше 100",0);
+} while (userNumberPrompt <= 100 && userNumberPrompt);
