@@ -16,7 +16,6 @@ if (userNumber < 10) {
 /* 2.2 */
 let message, login;
 
-
 switch (login) {
     case  'Сотрудник' :
         message = 'Привет';
@@ -30,4 +29,12 @@ switch (login) {
         message = 'Нет логина';
         console.log(message);
         break;
+}
+/* 2.3 */
+let age;
+age =45;
+if (age >= 14 && age <= 90) {
+    console.log ("верно");
+} else {
+    console.log ("неверно");
 }
