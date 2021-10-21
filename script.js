@@ -13,3 +13,21 @@ if (userNumber < 10) {
 } else {
     alert("неверно");
 }
+/* 2.2 */
+let message, login;
+
+
+switch (login) {
+    case  'Сотрудник' :
+        message = 'Привет';
+        console.log(message);
+        break;
+    case 'Директор' :
+        message = 'Здравствуйте';
+        console.log(message);
+        break;
+    default :
+        message = 'Нет логина';
+        console.log(message);
+        break;
+}
