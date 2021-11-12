@@ -1,85 +1,34 @@
-/* === Task1 === */
-let admin, name;
-name = "Джон";
-admin = name;
-console.log(admin);
+/* Task 1 */
 
-/* === Task2 === */
-/* 2.1 */
-let userNumber = prompt("Ведите число меньше 10", 0);
-console.log(userNumber);
-if (userNumber < 10) {
-    alert("верно");
-} else {
-    alert("неверно");
-}
-/* 2.2 */
-let message, login;
+/*
+Реализуйте класс Worker (Работник),
+ который будет иметь следующие свойства:
+ name (имя),
+  surname (фамилия),
+   rate (ставка за день работы),
+    days (количество отработанных дней).
+     Также класс должен иметь метод getSalary(),
+      который будет выводить зарплату работника.
+       Зарплата - это произведение (умножение) ставки rate на количество отработанных дней days.
+ С помощью нашего класса создайте двух рабочих и найдите сумму их зарплат.
+*/
 
-switch (login) {
-    case  'Сотрудник' :
-        message = 'Привет';
-        console.log(message);
-        break;
-    case 'Директор' :
-        message = 'Здравствуйте';
-        console.log(message);
-        break;
-    default :
-        message = 'Нет логина';
-        console.log(message);
-        break;
-}
-/* 2.3 */
-let age;
-age =45;
-if (age >= 14 && age <= 90) {
-    console.log ("верно");
-} else {
-    console.log ("неверно");
-}
-/* 2.4 */
-const number = +prompt('Введите число между 0 и 3', '');
-switch (number) {
-    case 0 : 
-    alert('Вы ввели число 0');
-    break;
-    case 1 :
-        alert('Вы ввели число 1');
-        break;
-        case 2 :
-        case 3 :
-            alert('Вы ввели число 2, а может и 3');
-            break;
-        default : 
-        alert('Вы ввели другое число');
-        break;
-}
-
-/* === Task3 === */
-/* 3.1 */
-let startNum = 2;
-for(startNum; startNum  <= 100; startNum++) {
-    if (startNum % 2 == 0) {
-        console.log(startNum);
+class Worker {
+    constructor(name, surname, rate, days) {
+        this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
+    }
+    getSalary() {
+        return this.rate * this.days;
     }
 }
-/* 3.2 */
 
-let userNumberPrompt; 
-do {
-    userNumberPrompt = prompt("Введите число больше 100",0);
-} while (userNumberPrompt <= 100 && userNumberPrompt);
+const worker1 = new Worker('Ben','Sherman', 350,20);
+const worker2 = new Worker('Fred','Oneil', 375,22);
 
-/* 3.3 */
+let SumOfSalary2Worker = worker1.getSalary() + worker2.getSalary();
 
-let n = 20;
-
-nextIterration: 
-for (let z = 2; z <= n; z++) {
-    for (let b = 2; b < z; b++) {
-        if (z % b == 0) continue nextIterration;
-    }
-    console.log(z);
-}
+ console.log(`Sum of salary worker - ${SumOfSalary2Worker}`);
 
