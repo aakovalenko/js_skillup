@@ -21,23 +21,7 @@ let SumOfSalary2Worker = worker1.getSalary() + worker2.getSalary();
 
 /* Task 2 */
 
-/*
-Реализуйте класс MyString,
- который будет иметь следующие методы: метод reverse(),
-  который параметром принимает строку,
-   а возвращает ее в перевернутом виде,
-    метод ucFirst(),
-    который параметром принимает строку, а возвращает эту же строку,
-     сделав ее первую букву заглавной 
-     и метод
-      ucWords,
- который принимает строку и делает заглавной первую букву каждого слова этой строки.
- */
 class MyString {
-
-    // constructor(mystr) {
-    //     this.mystr = mystr;
-    // }
 
     reverse(str) {
         return str.split('').reverse().join('');
@@ -67,3 +51,38 @@ console.log(my_string.reverse("Hello World"));
 console.log(my_string.ucFirst("kokonut"));
 
 console.log(my_string.ucWords("kokonut bibonat serede pepepe"));
+
+
+/* Task 3 */
+
+class Validator {
+    isEmail(email) {
+        return email
+    }
+
+    isDomain(domain) {
+        return domain
+    }
+
+    isDate(date) {
+        return date
+    }
+
+    isPhone(phone) {
+        return phone
+    }
+}
+
+const validator = new Validator();
+
+let emailValidate = validator.isEmail('fuf@fuf.fu');
+console.log(emailValidate);
+
+let domainValidate = validator.isDomain('www.domain.com');
+console.log(domainValidate);
+
+let dateValidate = validator.isDate('12.12.2020');
+console.log(dateValidate);
+
+let phoneValidate = validator.isPhone(0993456578);
+console.log(phoneValidate);
