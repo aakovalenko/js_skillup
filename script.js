@@ -57,19 +57,23 @@ console.log(my_string.ucWords("kokonut bibonat serede pepepe"));
 
 class Validator {
     isEmail(email) {
-        return email
+        let regExp = /\S+@\S+\.\S+/;
+        return regExp.test(email);
     }
 
     isDomain(domain) {
-        return domain
+        let regExp = /([a-z0-9]+\.)*[a-z0-9]+\.[a-z]+/;
+        return regExp.test(domain);
     }
 
     isDate(date) {
-        return date
+        let regExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+        return regExp.test(date);
     }
 
     isPhone(phone) {
-        return phone
+        let regExp = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+        return regExp.test(phone);
     }
 }
 
@@ -77,12 +81,19 @@ const validator = new Validator();
 
 let emailValidate = validator.isEmail('fuf@fuf.fu');
 console.log(emailValidate);
+let emailValidate2 = validator.isEmail('fuffuf.fu');
+console.log(emailValidate2);
 
 let domainValidate = validator.isDomain('www.domain.com');
 console.log(domainValidate);
 
 let dateValidate = validator.isDate('12.12.2020');
 console.log(dateValidate);
+let dateValidate2 = validator.isDate('12/12/2020');
+console.log(dateValidate2);
 
 let phoneValidate = validator.isPhone(0993456578);
 console.log(phoneValidate);
+
+let phoneValidate2 = validator.isPhone("+380993456578");
+console.log(phoneValidate2);
